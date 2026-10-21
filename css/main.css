@@ -1,0 +1,19 @@
+:root {
+    --brand-dark: #1e293b;
+    --brand-darker: #0f172a;
+    --brand-accent: #38bdf8;
+    --brand-accent-hover: #0284c7;
+    --brand-bg: #f4f7f6;
+    --brand-card: #ffffff;
+    --brand-text: #333333;
+    --brand-muted: #64748b;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--brand-bg);
+    color: var(--brand-text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

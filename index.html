@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta Seguro - Início</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS Customizados -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body class="bg-[#f4f7f6] text-gray-800 flex flex-col min-h-screen">
+
+    <header class="bg-[#1e293b] text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <a href="index.html" class="text-2xl font-bold tracking-tight flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved text-[#38bdf8]"></i>
+                <span>Conecta <span class="text-[#38bdf8]">seguro</span></span>
+            </a>
+            <nav>
+                <ul class="flex flex-wrap justify-center gap-2 sm:gap-6 text-sm sm:text-base font-medium">
+                    <li>
+                        <a href="index.html" class="tab-btn active px-3 py-2 text-[#38bdf8]">
+                            <i class="fa-solid fa-circle-info mr-1.5"></i>Sobre o projeto
+                        </a>
+                    </li>
+                    <li>
+                        <a href="aprender.html" class="tab-btn px-3 py-2 text-[#cbd5e1] hover:text-[#38bdf8]">
+                            <i class="fa-solid fa-book-open mr-1.5"></i>Aprender
+                        </a>
+                    </li>
+                    <li>
+                        <a href="jogar.html" class="tab-btn px-3 py-2 text-[#cbd5e1] hover:text-[#38bdf8]">
+                            <i class="fa-solid fa-gamepad mr-1.5"></i>Jogar
+                        </a>
+                    </li>
+                    <li>
+                        <a href="testar.html" class="tab-btn px-3 py-2 text-[#cbd5e1] hover:text-[#38bdf8]">
+                            <i class="fa-solid fa-square-check mr-1.5"></i>Testar
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 flex-1 w-full">
+        <div class="animate-fade-in space-y-8">
+            <!-- Hero Banner -->
+            <section class="bg-white rounded-xl p-8 text-center shadow-sm border border-gray-100">
+                <div class="inline-flex items-center justify-center p-3 bg-sky-50 rounded-full text-[#38bdf8] mb-4">
+                    <i class="fa-solid fa-lock text-3xl"></i>
+                </div>
+                <h1 class="text-3xl md:text-4xl font-extrabold text-[#0f172a] mb-4">Conecta Seguro</h1>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+                    Transformando orientação sobre cibersegurança em conhecimento prático, simulações e hábitos seguros na internet.
+                </p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 pt-6 border-t border-gray-100">
+                    <div class="p-3">
+                        <span class="block text-2xl font-bold text-[#0f172a]">80%+</span>
+                        <span class="text-xs text-gray-500 uppercase tracking-wider font-semibold">Dos ataques iniciam por Phishing</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="block text-2xl font-bold text-[#38bdf8]">100%</span>
+                        <span class="text-xs text-gray-500 uppercase tracking-wider font-semibold">Gratuito e Educativo</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="block text-2xl font-bold text-[#0f172a]">6 Módulos</span>
+                        <span class="text-xs text-gray-500 uppercase tracking-wider font-semibold">Aprendizado Interativo</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cards -->
+            <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm card-border-top border border-gray-100">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="p-2 bg-red-50 text-red-500 rounded-lg">
+                            <i class="fa-solid fa-triangle-exclamation text-xl"></i>
+                        </div>
+                        <h2 class="text-xl font-bold text-[#1e293b]">Problema</h2>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        Com o aumento expressivo dos golpes digitais no Brasil, grande parte dos usuários carece de conhecimento prático para identificar ameaças e proteger dados pessoais.
+                    </p>
+                    <ul class="text-xs text-gray-500 space-y-1 bg-gray-50 p-3 rounded-lg">
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle text-red-400 text-[8px]"></i> Senhas fracas reutilizadas</li>
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle text-red-400 text-[8px]"></i> Links maliciosos via SMS/E-mail</li>
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle text-red-400 text-[8px]"></i> Engenharia social contínua</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm card-border-top border border-gray-100">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="p-2 bg-sky-50 text-[#38bdf8] rounded-lg">
+                            <i class="fa-solid fa-lightbulb text-xl"></i>
+                        </div>
+                        <h2 class="text-xl font-bold text-[#1e293b]">Proposta do Site</h2>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        Oferecer uma plataforma intuitiva com módulos educativos, simulação interativa de golpes reais e um quiz para testar conhecimentos e fixar boas práticas.
+                    </p>
+                    <div class="flex gap-2">
+                        <a href="aprender.html" class="text-xs bg-[#38bdf8] hover:bg-[#0284c7] text-white px-3 py-1.5 rounded font-medium transition">Aprender Módulos</a>
+                        <a href="jogar.html" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded font-medium transition">Testar Simulador</a>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm card-border-top border border-gray-100">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="p-2 bg-emerald-50 text-emerald-600 rounded-lg">
+                            <i class="fa-solid fa-book text-xl"></i>
+                        </div>
+                        <h2 class="text-xl font-bold text-[#1e293b]">Fontes & Referências</h2>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-3">
+                        Conteúdo baseado nas recomendações oficiais das principais autoridades de cibersegurança:
+                    </p>
+                    <div class="space-y-2 text-xs">
+                        <a href="https://cartilha.cert.br/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2 bg-gray-50 hover:bg-sky-50 rounded transition text-slate-700 font-medium">
+                            <span><i class="fa-solid fa-arrow-up-right-from-square text-[#38bdf8] mr-2"></i>CERT.br - Cartilha</span>
+                            <i class="fa-solid fa-angle-right text-gray-400"></i>
+                        </a>
+                        <a href="https://owasp.org/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2 bg-gray-50 hover:bg-sky-50 rounded transition text-slate-700 font-medium">
+                            <span><i class="fa-solid fa-arrow-up-right-from-square text-[#38bdf8] mr-2"></i>OWASP Foundation</span>
+                            <i class="fa-solid fa-angle-right text-gray-400"></i>
+                        </a>
+                        <a href="https://www.gov.br/anpd/pt-br" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2 bg-gray-50 hover:bg-sky-50 rounded transition text-slate-700 font-medium">
+                            <span><i class="fa-solid fa-arrow-up-right-from-square text-[#38bdf8] mr-2"></i>ANPD / Guia LGPD</span>
+                            <i class="fa-solid fa-angle-right text-gray-400"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-[#0f172a] text-[#94a3b8] text-center py-6 px-4 text-xs sm:text-sm mt-auto border-t border-slate-800">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <p>Conecta Seguro - Projeto Educativo de Segurança Digital</p>
+            <p>Desenvolvido por <span class="text-slate-200 font-semibold">Ana, João e Lívia</span></p>
+        </div>
+    </footer>
+</body>
+</html>

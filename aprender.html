@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta Seguro - Aprender</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body class="bg-[#f4f7f6] text-gray-800 flex flex-col min-h-screen">
+
+    <header class="bg-[#1e293b] text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <a href="index.html" class="text-2xl font-bold tracking-tight flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved text-[#38bdf8]"></i>
+                <span>Conecta <span class="text-[#38bdf8]">seguro</span></span>
+            </a>
+            <nav>
+                <ul class="flex flex-wrap justify-center gap-2 sm:gap-6 text-sm sm:text-base font-medium">
+                    <li><a href="index.html" class="tab-btn px-3 py-2 text-[#cbd5e1] hover:text-[#38bdf8]">Sobre o projeto</a></li>
+                    <li><a href="aprender.html" class="tab-btn active px-3 py-2 text-[#38bdf8]">Aprender</a></li>
+                    <li><a href="jogar.html" class="tab-btn px-3 py-2 text-[#cbd5e1] hover:text-[#38bdf8]">Jogar</a></li>
+                    <li><a href="testar.html" class="tab-btn px-3 py-2 text-[#cbd5e1] hover:text-[#38bdf8]">Testar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 flex-1 w-full">
+        <div class="animate-fade-in space-y-6">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                    <h1 class="text-2xl font-bold text-[#0f172a]">Módulos de Aprendizado</h1>
+                    <p class="text-gray-600 text-sm">Clique em qualquer tópico para expandir o guia prático e checklist de proteção.</p>
+                </div>
+                <div class="text-xs bg-sky-100 text-sky-800 font-semibold px-3 py-1.5 rounded-full">
+                    Guia Prático de Segurança
+                </div>
+            </div>
+
+            <!-- Container carregado dinamicamente via JS -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="learn-modules-container"></div>
+        </div>
+    </main>
+
+    <footer class="bg-[#0f172a] text-[#94a3b8] text-center py-6 px-4 text-xs sm:text-sm mt-auto border-t border-slate-800">
+        <p>Conecta Seguro - Projeto Educativo de Segurança Digital</p>
+    </footer>
+
+    <!-- Scripts da Aplicação -->
+    <script src="js/data.js"></script>
+    <script src="js/checklist.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta Seguro - Quiz e Testes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body class="bg-[#f4f7f6] text-gray-800 flex flex-col min-h-screen">
+
+    <header class="bg-[#1e293b] text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <a href="index.html" class="text-2xl font-bold tracking-tight flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved text-[#38bdf8]"></i>
+                <span>Conecta <span class="text-[#38bdf8]">seguro</span></span>
+            </a>
+            <nav>
+                <ul class="flex flex-wrap justify-center gap-2 sm:gap-6 text-sm sm:text-base font-medium">
+                    <li><a href="index.html" class="tab-btn px-3 py-2 text-[#cbd5e1] hover:text-[#38bdf8]">Sobre o projeto</a></li>
+                    <li><a href="aprender.html" class="tab-btn px-3 py-2 text-[#cbd5e1] hover:text-[#38bdf8]">Aprender</a></li>
+                    <li><a href="jogar.html" class="tab-btn px-3 py-2 text-[#cbd5e1] hover:text-[#38bdf8]">Jogar</a></li>
+                    <li><a href="testar.html" class="tab-btn active px-3 py-2 text-[#38bdf8]">Testar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 flex-1 w-full">
+        <div class="animate-fade-in space-y-6">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                <div>
+                    <h1 class="text-2xl font-bold text-[#0f172a] flex items-center gap-2">
+                        <i class="fa-solid fa-square-check text-[#38bdf8]"></i> Quizz de Cibersegurança
+                    </h1>
+                    <p class="text-gray-600 text-sm">Responda às perguntas e teste se você está preparado para navegar com segurança na internet.</p>
+                </div>
+                <div class="text-xs bg-slate-100 text-slate-700 font-semibold px-3 py-1.5 rounded-full">
+                    5 Questões
+                </div>
+            </div>
+
+            <!-- Quiz Container -->
+            <div id="quiz-container" class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-200">
+                <div class="w-full bg-gray-100 h-2.5 rounded-full mb-6 overflow-hidden">
+                    <div id="quiz-progress" class="bg-[#38bdf8] h-2.5 rounded-full transition-all duration-300" style="width: 20%;"></div>
+                </div>
+
+                <div class="flex justify-between items-center mb-4 text-xs font-bold text-gray-400 uppercase tracking-wider">
+                    <span id="quiz-question-number">Pergunta 1 de 5</span>
+                    <span id="quiz-category" class="text-[#38bdf8]">Engenharia Social</span>
+                </div>
+
+                <h2 id="quiz-question-text" class="text-lg md:text-xl font-bold text-[#0f172a] mb-6">Carregando pergunta...</h2>
+
+                <div id="quiz-options" class="space-y-3 mb-6"></div>
+
+                <div id="quiz-explanation" class="hidden p-4 rounded-xl bg-slate-50 border border-slate-200 mb-6 animate-fade-in">
+                    <h4 id="explanation-title" class="font-bold text-sm mb-1">Explicando:</h4>
+                    <p id="explanation-body" class="text-sm text-gray-600 leading-relaxed"></p>
+                </div>
+
+                <div class="flex justify-end">
+                    <button id="quiz-next-btn" onclick="nextQuestion()" class="hidden bg-[#38bdf8] hover:bg-[#0284c7] text-white font-semibold px-6 py-2.5 rounded-xl transition text-sm">
+                        Próxima Pergunta <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Resultado -->
+            <div id="quiz-result" class="hidden bg-white p-8 rounded-xl shadow-sm border border-gray-200 text-center animate-fade-in">
+                <div id="quiz-badge-icon" class="w-20 h-20 mx-auto bg-sky-100 text-[#38bdf8] rounded-full flex items-center justify-center text-4xl mb-4">
+                    <i class="fa-solid fa-award"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-[#0f172a] mb-2">Quiz Concluído!</h2>
+                <p class="text-gray-600 mb-4">Você acertou <span id="quiz-final-score" class="font-bold text-[#38bdf8] text-xl">0</span> de 5 perguntas.</p>
+                
+                <div id="quiz-badge-card" class="max-w-md mx-auto bg-slate-50 border p-4 rounded-xl mb-6">
+                    <span class="text-xs uppercase font-bold text-gray-400 block mb-1">Seu Nível de Conhecimento</span>
+                    <h3 id="quiz-badge-title" class="text-lg font-bold text-[#1e293b]">Guardião Digital</h3>
+                    <p id="quiz-badge-desc" class="text-xs text-gray-500 mt-1"></p>
+                </div>
+
+                <button onclick="restartQuiz()" class="bg-[#1e293b] hover:bg-[#0f172a] text-white font-semibold px-6 py-3 rounded-xl transition text-sm inline-flex items-center gap-2">
+                    <i class="fa-solid fa-rotate-left"></i> Refazer o Quiz
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-[#0f172a] text-[#94a3b8] text-center py-6 px-4 text-xs sm:text-sm mt-auto border-t border-slate-800">
+        <p>Conecta Seguro - Projeto Educativo de Segurança Digital</p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

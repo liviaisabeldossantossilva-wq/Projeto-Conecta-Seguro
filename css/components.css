@@ -1,0 +1,24 @@
+.card-border-top {
+    border-top: 4px solid var(--brand-accent);
+}
+
+.tab-btn.active {
+    color: var(--brand-accent);
+    font-weight: 600;
+    border-bottom: 2px solid var(--brand-accent);
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(6px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
